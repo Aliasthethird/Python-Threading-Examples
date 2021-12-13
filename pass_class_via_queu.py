@@ -14,8 +14,7 @@ class Message(object):
 message_s = Message()
 q.put(message_s)
 
-message_s = Message("Test1", 5)
-q.put(message_s)
+message_s = Message("Test1", 5) # New object in queue
 
 message_s = Message("Test2", 5)
 q.put(message_s)
