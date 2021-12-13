@@ -1,4 +1,4 @@
-# Base on
+# Based on
 # https://realpython.com/intro-to-python-threading/
 import logging
 import threading
