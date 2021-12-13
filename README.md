@@ -1,2 +1,1 @@
-# ThreadedClock
-Python Examples on how to use threads
+# Python Examples on how to use threads
