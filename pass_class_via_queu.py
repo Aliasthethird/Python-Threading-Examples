@@ -2,8 +2,8 @@ import queue
 
 q = queue.Queue()
 
-class Message:
-    def __init__(self, key = 'Test', priority = 0):
+class Message(object):
+    def __init__(self, key = 'Test', priority = 10):
         self.key = key
         self.priority = priority
     def foo(self):
@@ -17,18 +17,22 @@ q.put(message_s)
 message_s = Message("Test2", 5)
 q.put(message_s)
 
-# message_s.key = "test3" 
-# message_s.priority = 1
+
+message_s.key = "test3" # updats object in queue -> passed by reference?!
+message_s.priority = 3
 # q.put(message_s)
 
-message_r = q.get()
+message_r = q.get(timeout=1)
 print(message_r.key)
 message_r.foo()
 
-message_r = q.get()
+message_r = q.get(timeout=1)
 print(message_r.key)
 message_r.foo()
 
-message_r = q.get()
-print(message_r.key)
-message_r.foo()
+try:
+    message_r = q.get(timeout=1)
+    print(message_r.key)
+    message_r.foo()
+except:
+    pass
