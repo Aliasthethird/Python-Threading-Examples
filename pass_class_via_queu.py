@@ -1,5 +1,5 @@
 import queue
-from copy import deepcopy
+import copy 
 
 q = queue.Queue()
 
@@ -26,14 +26,14 @@ message_s.priority = 3
 q.put(message_s)
 
 message_s = Message("Test 3", 5)
-q.put(deepcopy(message_s))
+q.put(copy.copy(message_s)) # deepcopy appears unnecessary here
 
 message_s.key = "dose not override Test 3" # updats object in queue -> passed by reference?!
 message_s.priority = 3
 q.put(message_s)
 
 
-for i in range(7):
+for i in range(q.qsize() + 1): # +1 to timeout behaviour
     try:
         message_r = q.get(timeout=1)
         print('key = ', message_r.key)
