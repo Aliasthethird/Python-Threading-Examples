@@ -128,7 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Junk
+# Junk stuff
 junk.py
 junk1.py
 junk2.py
