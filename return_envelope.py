@@ -2,6 +2,16 @@ import time
 import threading
 import queue
 
+__author__ = 'Gero Nootz'
+__copyright__ = ''
+__credits__ = ['', '']
+__license__ = ''
+__version__ = '1.0.0'
+__date__ = '02/04/2022'
+__maintainer__ = 'Gero Nootz'
+__email__ = 'gero.nootz@usm.edu'
+__status__ = 'Prototype'
+
 class Request():
     """
     Containr to pass message to Receiver via return queue
