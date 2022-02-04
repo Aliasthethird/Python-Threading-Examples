@@ -1,9 +1,20 @@
+"""
+Demonstrates how to pass objects via a queue.
+
+
+"""
+
+__author__ = 'Gero Nootz'
+__version__ = '1.0.0'
+__email__ = 'gero.noozt@usm.edu'
+__status__ = 'Prototype'
+
 import queue
 import copy 
 
-q = queue.Queue()
 
-class Message(object):
+
+class Message:
     def __init__(self, key = 'Default', priority = 10):
         self.key = key
         self.priority = priority
@@ -11,9 +22,15 @@ class Message(object):
         for i in range(1,self.priority+1):
             print(i, end = " ")
         print()
+        
+q = queue.Queue()
 
-message_s = Message()
-q.put(message_s)
+def foo():
+    message_s = Message()
+    for i in range(2):
+        q.put(message_s)
+
+foo()
 
 message_s = Message("Test 1", 5) # New object in queue
 q.put(message_s)
