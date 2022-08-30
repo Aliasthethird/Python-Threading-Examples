@@ -1,7 +1,9 @@
 import tkinter as tk
 import winsound
 
-from mylib.mylib import Receiver
+# from mylib.mylib import Receiver
+from mylib.mylib import *
+
 receiver = Receiver()
 
 def send():
@@ -13,7 +15,7 @@ def send():
 root = tk.Tk()
 
 # Open window having dimension 100x100
-root.geometry('100x100')
+root.geometry('100x50')
  
 # Create a Button
 btn = tk.Button(root, text = 'Click me !', bd = '5',
