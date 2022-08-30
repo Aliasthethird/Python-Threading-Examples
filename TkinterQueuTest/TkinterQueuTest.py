@@ -1,9 +1,8 @@
 import tkinter as tk
-import time
 import winsound
 
 
-from lib.lib import Receiver
+from mylib.mylib import Receiver
 receiver = Receiver()
 
 
