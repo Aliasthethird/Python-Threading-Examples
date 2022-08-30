@@ -1,10 +1,8 @@
 import tkinter as tk
 import winsound
 
-
 from mylib.mylib import Receiver
 receiver = Receiver()
-
 
 def send():
     receiver.put("Button was pressed")
