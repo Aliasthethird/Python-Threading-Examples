@@ -2,7 +2,12 @@ import tkinter as tk
 import winsound
 
 # from mylib.mylib import Receiver
-from mylib.mylib import *
+from mylib.mylib import Receiver
+
+'''
+Demonstrate how to use a thread that runs parallel to the Tkinter event loop.
+It uses a queue to communicate between Tkinter and the parallels thread
+'''
 
 receiver = Receiver()
 
