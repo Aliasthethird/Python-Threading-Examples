@@ -14,7 +14,7 @@ __status__ = 'Prototype'
 
 class Request():
     """
-    Containr to pass message to Receiver via return queue
+    Container to pass message to Receiver via return queue
     """
     def __init__(self, q: queue.Queue):
         self.q = q
